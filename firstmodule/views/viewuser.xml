@@ -1,0 +1,29 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_form">
+            <field name="name">viewuser.form</field>
+            <field name="model">refermodels</field>
+            <field name="arch" type="xml">
+                <form string="Form user">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="work_refer"/>
+                            <field name="sex"/>
+                            <field name="bird_day"/>
+                            <field name="age"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="action2">
+            <field name="name">action.view</field>
+            <field name="res_model">refermodels</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_form" />
+        </record>
+        <menuitem id="main_test" name="test"
+                  action="action2"/>
+    </data>
+</odoo>

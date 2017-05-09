@@ -1,5 +1,6 @@
 <odoo>
   <data>
+
     <!-- explicit list view definition -->
     <!--
     <record model="ir.ui.view" id="firstmodule.list">
@@ -14,7 +15,6 @@
       </field>
     </record>
     -->
-
     <!-- actions opening views on models -->
     <!--
     <record model="ir.actions.act_window" id="firstmodule.action_window">
@@ -55,5 +55,16 @@
     <menuitem name="Server to list" id="firstmodule" parent="firstmodule.menu_2"
               action="firstmodule.action_server"/>
     -->
+    <record model="testmodels" id="record_1">
+      <field name="name">support</field>
+      <field name="description">hotro</field>
+    </record>
+    <record model="testmodels" id="record_2">
+      <field name="name">dev</field>
+    </record>
+    <record model="testmodels" id="record_3">
+      <field name="name">manager</field>
+      <field name="description">quan ly</field>
+    </record>
   </data>
 </odoo>

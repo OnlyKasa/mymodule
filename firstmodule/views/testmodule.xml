@@ -1,0 +1,44 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_form_work">
+            <field name="name">testmodels.form</field>
+            <field name="model">testmodels</field>
+            <field name="arch" type="xml">
+                <form string="test Form">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                            <field name="work"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="action">
+            <field name="name">action.view</field>
+            <field name="res_model">testmodels</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_form_work" />
+        </record>
+        <record model="ir.actions.act_window" id="action1">
+            <field name="name">action.gernal</field>
+            <field name="res_model">testmodels</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first
+                </p>
+            </field>
+        </record>
+
+
+        <menuitem id="main_menu" name="Open test module "/>
+        <menuitem id="content_menu" name="Open"
+                  parent="main_menu"/>
+        <menuitem id="child_menu" name="test module" parent="content_menu"
+                  action="action1"/>
+        <menuitem id="group" name="test" parent="content_menu"
+                  action="action"/>
+    </data>
+</odoo>

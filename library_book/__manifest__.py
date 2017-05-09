@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Here is module",
+    'name': "library_book",
 
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
@@ -10,7 +10,7 @@
         Long description of module's purpose
     """,
 
-    'author': "QuangHi",
+    'author': "My Company",
     'website': "http://www.yourcompany.com",
 
     # Categories can be used to filter modules in modules listing
@@ -20,15 +20,13 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base', 'decimal_precision'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
-        'views/testmodule.xml',
-         'views/viewuser.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
